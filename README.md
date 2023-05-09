@@ -40,7 +40,7 @@ _* Create an Azure Synapse workspace. Note that if you've previously created a S
 _* Use the built-in serverless SQL pool and database within the Synapse workspace_
 
 To accomplish this task, was created 2 resources:
-* *PostgreSQL*: A postgreSQL called `postdb-udacity-divvy`
+* *PostgreSQL*: A postgreSQL called `postdb-udacity-divvy`. The host, user and password must be on variables on DataToPostgres.py script to work properly.
 * *Azure Synapse*: An Azure Synapse Workspace calle `asw-udacity-divvy`
 
 [PRINT DOS RECURSOS NO RESOURCE GROUP]
@@ -50,11 +50,22 @@ To accomplish this task, was created 2 resources:
 Task Description:
 _You are being provided a relational schema that describes the data as it exists in PostgreSQL. In addition, you have been given a set of business requirements related to the data warehouse. You are being asked to design a star schema using fact and dimension tables._
 
+The following Star Schema was designed based on ERP.
+
 ![Star Schema](./images/StarSchema.png)
 
-#### Project Data
+### Task 3 - Create the data In PostgreSQL
 
-The data provided for this project can be downloaded from [Divvy Data](https://video.udacity-data.com/topher/2022/March/622a5fc6_azure-data-warehouse-projectdatafiles/azure-data-warehouse-projectdatafiles.zip) and should be paste on `.\data\` folder.
+The data provided for this project can be downloaded from [Divvy Data](https://video.udacity-data.com/topher/2022/March/622a5fc6_azure-data-warehouse-projectdatafiles/azure-data-warehouse-projectdatafiles.zip) and should be paste on `.\data\` folder. 
+
+The script to ingest data on PostgreSQL is present on `DataToPostgres.py`. It is necessary to configure the host, user and password on the script with the values created on Task 1. If necessary, install the requiriments running the command `pip install -r requirements.txt`.
+
+### Task 4 - EXTRACT the data from PostgreSQL
+
+Task Description:
+_In your Azure Synapse workspace, you will use the ingest wizard to create a one-time pipeline that ingests the data from PostgreSQL into Azure Blob Storage. This will result in all four tables being represented as text files in Blob Storage, ready for loading into the data warehouse._
+
+
 
 
 
