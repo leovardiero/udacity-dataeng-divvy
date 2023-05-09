@@ -3,7 +3,7 @@ Divvy is a bike sharing program in Chicago, Illinois USA that allows riders to p
 
 Since the data from Divvy are anonymous, we have created fake rider and account profiles along with fake payment data to go along with the data from Divvy. The dataset looks like this:
 
-[IMAGE]
+![Divvy ERP](./images/divvy-erd.png)
 
 The goal of this project is to develop a data warehouse solution using Azure Synapse Analytics. You will:
 
@@ -30,6 +30,32 @@ The business outcomes you are designing for are as follows:
 * Based on how many rides the rider averages per month
 * Based on how many minutes the rider spends on a bike per month
 
+# Tasks
+
+### Task 1 - Create your Azure resources
+
+Task Description:
+_* Create an Azure Database for PostgreSQL;_
+_* Create an Azure Synapse workspace. Note that if you've previously created a Synapse Workspace, you do not need to create a second one specifically for the project;_
+_* Use the built-in serverless SQL pool and database within the Synapse workspace_
+
+To accomplish this task, was created 2 resources:
+* *PostgreSQL*: A postgreSQL called `postdb-udacity-divvy`
+* *Azure Synapse*: An Azure Synapse Workspace calle `asw-udacity-divvy`
+
+[PRINT DOS RECURSOS NO RESOURCE GROUP]
+
+### Task 2 - Design a star schema
+
+Task Description:
+_You are being provided a relational schema that describes the data as it exists in PostgreSQL. In addition, you have been given a set of business requirements related to the data warehouse. You are being asked to design a star schema using fact and dimension tables._
+
+![Star Schema](./images/StarSchema.png)
+
 #### Project Data
 
-The data provided for this project is present on `./data` folder. There are 4 tables
+The data provided for this project can be downloaded from [Divvy Data](https://video.udacity-data.com/topher/2022/March/622a5fc6_azure-data-warehouse-projectdatafiles/azure-data-warehouse-projectdatafiles.zip) and should be paste on `.\data\` folder.
+
+
+
+
