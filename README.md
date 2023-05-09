@@ -12,21 +12,21 @@ The goal of this project is to develop a data warehouse solution using Azure Syn
 * Transform the data into the star schema;
 * and finally, view the reports from Analytics.
 
-#### Required Analysis
+### Required Analysis
 
 The business outcomes you are designing for are as follows:
 
-##### 1. Analyze how much time is spent per rid
+#### 1. Analyze how much time is spent per rid
 * Based on date and time factors such as day of week and time of day
 * Based on which station is the starting and / or ending station
 * Based on age of the rider at time of the ride
 * Based on whether the rider is a member or a casual rider
 
-##### 2. Analyze how much money is spent
+#### 2. Analyze how much money is spent
 * Per month, quarter, year
 * Per member, based on the age of the rider at account start
 
-##### 3. EXTRA CREDIT - Analyze how much money is spent per member
+#### 3. EXTRA CREDIT - Analyze how much money is spent per member
 * Based on how many rides the rider averages per month
 * Based on how many minutes the rider spends on a bike per month
 
@@ -35,19 +35,21 @@ The business outcomes you are designing for are as follows:
 ### Task 1 - Create your Azure resources
 
 Task Description:
+
 _* Create an Azure Database for PostgreSQL;_
 _* Create an Azure Synapse workspace. Note that if you've previously created a Synapse Workspace, you do not need to create a second one specifically for the project;_
 _* Use the built-in serverless SQL pool and database within the Synapse workspace_
 
 To accomplish this task, was created 2 resources:
-* *PostgreSQL*: A postgreSQL called `postdb-udacity-divvy`. The host, user and password must be on variables on DataToPostgres.py script to work properly.
-* *Azure Synapse*: An Azure Synapse Workspace calle `asw-udacity-divvy`
+* **PostgreSQL**: A postgreSQL called `postdb-udacity-divvy`. The host, user and password must be on variables on DataToPostgres.py script to work properly.
+* **Azure Synapse**: An Azure Synapse Workspace calle `asw-udacity-divvy`
 
 [PRINT DOS RECURSOS NO RESOURCE GROUP]
 
 ### Task 2 - Design a star schema
 
 Task Description:
+
 _You are being provided a relational schema that describes the data as it exists in PostgreSQL. In addition, you have been given a set of business requirements related to the data warehouse. You are being asked to design a star schema using fact and dimension tables._
 
 The following Star Schema was designed based on ERP.
@@ -63,10 +65,7 @@ The script to ingest data on PostgreSQL is present on `DataToPostgres.py`. It is
 ### Task 4 - EXTRACT the data from PostgreSQL
 
 Task Description:
+
 _In your Azure Synapse workspace, you will use the ingest wizard to create a one-time pipeline that ingests the data from PostgreSQL into Azure Blob Storage. This will result in all four tables being represented as text files in Blob Storage, ready for loading into the data warehouse._
-
-
-
-
 
 
