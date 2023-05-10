@@ -4,14 +4,14 @@ from psycopg2.extensions import ISOLATION_LEVEL_AUTOCOMMIT
 ########################################
 # Update connection string information #
 ########################################
-host = "<<host>>"
-user = "<<user>>"
-password = "<<password>>"
+host = "<hostname>"
+user = "<user>"
+password = "<password>"
 
 # Create a new DB
-sslmode = "require"
+sslmode = "disable"
 dbname = "postgres"
-conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
+conn_string = "host={0} port=5455 user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
 conn = psycopg2.connect(conn_string)
 conn.set_isolation_level(ISOLATION_LEVEL_AUTOCOMMIT);
 print("Connection established")
@@ -26,7 +26,7 @@ conn.close()
 
 # Reconnect to the new DB
 dbname = "udacityproject"
-conn_string = "host={0} user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
+conn_string = "host={0} port=5455 user={1} dbname={2} password={3} sslmode={4}".format(host, user, dbname, password, sslmode)
 conn = psycopg2.connect(conn_string)
 print("Connection established")
 cursor = conn.cursor()
