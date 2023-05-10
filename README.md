@@ -68,4 +68,20 @@ Task Description:
 
 _In your Azure Synapse workspace, you will use the ingest wizard to create a one-time pipeline that ingests the data from PostgreSQL into Azure Blob Storage. This will result in all four tables being represented as text files in Blob Storage, ready for loading into the data warehouse._
 
+The screenshot below, shows the four tables into the Blob Storage, ready for load into data warehouse.
 
+[IMAGE DATA]
+
+### Task 5 - LOAD the data into external tables in the data warehouse
+
+Task Description:
+
+_Once in Blob storage, the files will be shown in the data lake node in the Synapse Workspace. From here, you can use the script-generating function to load the data from blob storage into external staging tables in the data warehouse you created using the serverless SQL Pool._
+
+The scripts used to load into staging tables are present on folder `Scripts`: 
+- `01. Load Payment.sql`;
+- `02. Load Rider.sql`;
+- `03. Load Station.sql`;
+- `04. Load Trip.sql`;
+
+### Task 6 - TRANSFORM the data to the star schema using CETAS
