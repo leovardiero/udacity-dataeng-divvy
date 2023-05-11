@@ -34,7 +34,9 @@ SELECT
                  DATEDIFF(SECOND, tr.start_at, tr.ended_at), 
                  0) AS TIME) AS [rid_duration],
 
-    tr.rideable_type   AS [rideable_type]
+    tr.rideable_type   AS [rideable_type],
+    DATEDIFF(YEAR, SUBSTRING(tr.start_at, 0, 11), SUBSTRING(rd.birthday, 0, 11)) AS [rider_age]
 FROM dbo.staging_trip tr
+JOIN dbo.staging_rider rd ON tr.rider_id = rd.rider_id
 
 SELECT TOP(100) * FROM dbo.factTrip;
