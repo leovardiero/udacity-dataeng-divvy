@@ -43,8 +43,9 @@ _* Use the built-in serverless SQL pool and database within the Synapse workspac
 To accomplish this task, was created 2 resources:
 * **PostgreSQL**: A postgreSQL called `postdb-udacity-divvy`. The host, user and password must be on variables on DataToPostgres.py script to work properly.
 * **Azure Synapse**: An Azure Synapse Workspace calle `asw-udacity-divvy`
+* **Storage Account**: Required Storage Account to use on Azure Synapse called `staudacitydivvy`
 
-[PRINT DOS RECURSOS NO RESOURCE GROUP]
+![Resources](./images/resources.jpg)
 
 ### Task 2 - Design a star schema
 
@@ -70,7 +71,9 @@ _In your Azure Synapse workspace, you will use the ingest wizard to create a one
 
 The screenshot below, shows the four tables into the Blob Storage, ready for load into data warehouse.
 
-[IMAGE DATA]
+![Tables on Azure BLOB Storage](./images/tables_on_blob.jpg)
+
+**Important: The separator is a pipe (|)**
 
 ### Task 5 - LOAD the data into external tables in the data warehouse
 
