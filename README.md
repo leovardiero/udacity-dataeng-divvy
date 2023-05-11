@@ -88,3 +88,10 @@ The scripts used to load into staging tables are present on folder `Scripts`:
 - `04. Load Trip.sql`;
 
 ### Task 6 - TRANSFORM the data to the star schema using CETAS
+
+The scripts used to transform into StarSchema are present on folder `Scripts`: 
+- `05. Create dimDate.sql`;
+- `06. Create dimRider.sql`;
+- `07. Create dimStation.sql`;
+- `08. Create factTrip.sql`;
+- `09. Create factPayment.sql`;
